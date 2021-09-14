@@ -76,6 +76,7 @@
  function connect(usbDevice) {
  	usbDevice.open().then(function(){
  		console.log("connected");
+		uDevice = usbDevice; 
  		checkProtocol(usbDevice);
  	}).catch(e => {
 		console.log("Can't connect " + e);
